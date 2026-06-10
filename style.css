@@ -1,0 +1,25 @@
+/* Custom CSS untuk memperhalus UI */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pengaturan Tampilan Slide Carousel */
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Efek transisi halus saat slide berubah */
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}

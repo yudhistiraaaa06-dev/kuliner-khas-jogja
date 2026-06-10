@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Khas Yogyakarta - Resep Tradisional</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    
+    <!-- Google Fonts -->
+    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&display=swap)" rel="stylesheet">
+    
+    <!-- Hubungkan ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-amber-50 text-stone-800">
+
+    <!-- 1. HEADER & NAVIGATION -->
+    <header class="bg-amber-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-wider text-amber-400">Jogja<span class="text-white">Rasa</span></span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#beranda" class="hover:text-amber-300 transition duration-300">Beranda</a>
+                <a href="#kuliner-populer" class="hover:text-amber-300 transition duration-300">Kuliner Populer</a>
+                <a href="#resep-gudeg" class="hover:text-amber-300 transition duration-300">Resep Gudeg</a>
+                <a href="#resep-klatak" class="hover:text-amber-300 transition duration-300">Resep Sate Klatak</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-950 px-4 py-4 space-y-3 border-t border-amber-800">
+            <a href="#beranda" class="block hover:text-amber-300 py-1 transition">Beranda</a>
+            <a href="#kuliner-populer" class="block hover:text-amber-300 py-1 transition">Kuliner Populer</a>
+            <a href="#resep-gudeg" class="block hover:text-amber-300 py-1 transition">Resep Gudeg</a>
+            <a href="#resep-klatak" class="block hover:text-amber-300 py-1 transition">Resep Sate Klatak</a>
+        </div>
+    </header>
+
+    <!-- 2. SLIDER / CAROUSEL -->
+    <section id="beranda" class="relative overflow-hidden bg-black h-[500px]">
+        <!-- Slide 1 -->
+        <div class="slide active relative h-full">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('[https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200](https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200)'); opacity: 0.6;"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                <span class="bg-amber-500 text-amber-950 font-bold px-4 py-1 rounded-full text-xs uppercase tracking-widest mb-4">Ikon Kuliner Nusantara</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Gudeg Jogja Nan Legendaris</h1>
+                <p class="text-stone-200 max-w-xl text-sm md:text-base mb-6">Cita rasa manis dan gurih nangka muda berpadu dengan santan kental khas resep keraton yang turun-temurun.</p>
+                <a href="#resep-gudeg" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-semibold px-6 py-3 rounded-md transition duration-300">Lihat Resep Utama</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide relative h-full">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('[https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1200](https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1200)'); opacity: 0.6;"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                <span class="bg-amber-500 text-amber-950 font-bold px-4 py-1 rounded-full text-xs uppercase tracking-widest mb-4">Sate Unik & Klasik</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Kelezatan Sate Klatak</h1>
+                <p class="text-stone-200 max-w-xl text-sm md:text-base mb-6">Daging kambing muda empuk yang dipanggang menggunakan jeruji besi sepeda dengan bumbu minimalis nan kaya rasa.</p>
+                <a href="#resep-klatak" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-semibold px-6 py-3 rounded-md transition duration-300">Pelajari Resep Sate</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide relative h-full">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('[https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&q=80&w=1200](https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&q=80&w=1200)'); opacity: 0.6;"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                <span class="bg-amber-500 text-amber-950 font-bold px-4 py-1 rounded-full text-xs uppercase tracking-widest mb-4">Oleh-oleh Manis</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Bakpia Pathok Jogja</h1>
+                <p class="text-stone-200 max-w-xl text-sm md:text-base mb-6">Camilan manis panggang berisikan kacang hijau lembut yang selalu dirindukan setiap wisatawan.</p>
+                <a href="#kuliner-populer" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-semibold px-6 py-3 rounded-md transition duration-300">Jelajahi Kuliner Jogja</a>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 bg-amber-900/50 hover:bg-amber-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition focus:outline-none">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 bg-amber-900/50 hover:bg-amber-900 text-white w-10 h-10 rounded-full flex items-center justify-center transition focus:outline-none">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- 3. THREE CONTAINER COLUMN (Top Image & Description) -->
+    <section id="kuliner-populer" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-amber-900 mb-2">Tiga Pilar Kuliner Yogyakarta</h2>
+            <p class="text-stone-600">Keberagaman cita rasa legendaris yang mendefinisikan jati diri Kota Gudeg.</p>
+            <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Column 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                <div class="h-48 overflow-hidden bg-stone-100">
+                    <img class="w-full h-full object-cover transition duration-500 hover:scale-105" 
+                         src="[https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=500](https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=500)" 
+                         alt="Gudeg Jogja Tradisional" 
+                         onerror="this.src='[https://placehold.co/500x300?text=Gudeg+Yogyakarta](https://placehold.co/500x300?text=Gudeg+Yogyakarta)'"/>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-amber-900 mb-2">Gudeg Komplit</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Makanan berbahan dasar nangka muda (tewel) yang dimasak perlahan bersama santan, gula jawa, dan daun jati agar warnanya kecokelatan eksotis. Disajikan bersama opor ayam, telur, tahu, dan krecek pedas manis yang melimpah.
+                        </p>
+                    </div>
+                    <a href="#resep-gudeg" class="text-amber-700 font-semibold hover:text-amber-950 inline-flex items-center text-sm gap-2 mt-2">
+                        Resep Lengkap <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                <div class="h-48 overflow-hidden bg-stone-100">
+                    <img class="w-full h-full object-cover transition duration-500 hover:scale-105" 
+                         src="[https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=500](https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=500)" 
+                         alt="Sate Klatak Kambing" 
+                         onerror="this.src='[https://placehold.co/500x300?text=Sate+Klatak](https://placehold.co/500x300?text=Sate+Klatak)'"/>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-amber-900 mb-2">Sate Klatak</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Sate kambing khas Bantul yang sangat unik karena ditusuk dengan jeruji roda sepeda. Jeruji besi ini bertindak sebagai konduktor panas yang sempurna untuk mematangkan daging kambing bagian dalam secara merata saat dibakar.
+                        </p>
+                    </div>
+                    <a href="#resep-klatak" class="text-amber-700 font-semibold hover:text-amber-950 inline-flex items-center text-sm gap-2 mt-2">
+                        Resep Lengkap <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                <div class="h-48 overflow-hidden bg-stone-100">
+                    <img class="w-full h-full object-cover transition duration-500 hover:scale-105" 
+                         src="[https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=500](https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=500)" 
+                         alt="Bakpia Pathok Jogja" 
+                         onerror="this.src='[https://placehold.co/500x300?text=Bakpia+Pathok](https://placehold.co/500x300?text=Bakpia+Pathok)'"/>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-amber-900 mb-2">Bakpia Pathok</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Kue akulturasi Tionghoa-Jawa yang diisi kacang hijau kupas manis, cokelat, atau keju. Kulit luar bakpia bertekstur renyah tipis berlapis-lapis sementara bagian dalamnya sangat lembut dan lumer di mulut saat dinikmati hangat-hangat.
+                        </p>
+                    </div>
+                    <button class="text-amber-700 font-semibold hover:text-amber-950 inline-flex items-center text-sm gap-2 mt-2 pointer-events-none">
+                        Oleh-oleh Utama <i class="fa-solid fa-gift"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TWO CONTAINER COLUMNS (Left or Right Image & Description) -->
+    
+    <!-- Row 1: Resep Gudeg Jogja (Image Left, Text Right) -->
+    <section id="resep-gudeg" class="bg-amber-100/60 py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Image Container -->
+                <div class="order-1 lg:order-1">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-amber-500/20 rounded-lg -z-10"></div>
+                        <img src="[https://images.unsplash.com/photo-1626804475315-9644b37a2fe4?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1626804475315-9644b37a2fe4?auto=format&fit=crop&q=80&w=600)" 
+                             alt="Memasak Gudeg Tradisional" 
+                             class="rounded-xl shadow-lg w-full object-cover h-[400px]"
+                             onerror="this.src='[https://placehold.co/600x400?text=Gudeg+Jogja](https://placehold.co/600x400?text=Gudeg+Jogja)'"/>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-900/20 rounded-lg -z-10"></div>
+                    </div>
+                </div>
+
+                <!-- Right Description Container -->
+                <div class="order-2 lg:order-2">
+                    <span class="text-amber-700 font-bold tracking-wider text-xs uppercase block mb-2">Resep Keraton</span>
+                    <h2 class="text-3xl font-bold text-amber-900 mb-6">Gudeg Khas Yogyakarta</h2>
+                    <p class="text-stone-700 leading-relaxed mb-6">
+                        Gudeg Jogja terkenal dengan rasa manisnya yang legit khas Jawa Tengah. Menggunakan kuali tanah liat tradisional memberikan aroma khas tersendiri yang sangat harum dan menggugah selera makan Anda.
+                    </p>
+
+                    <!-- Tab Resep -->
+                    <div class="mb-6">
+                        <div class="flex border-b border-amber-300">
+                            <button id="tab-gudeg-bahan-btn" class="py-2 px-4 font-semibold text-amber-900 border-b-2 border-amber-800 focus:outline-none">Bahan-bahan</button>
+                            <button id="tab-gudeg-cara-btn" class="py-2 px-4 font-semibold text-stone-500 hover:text-amber-900 focus:outline-none">Langkah-langkah</button>
+                        </div>
+                        
+                        <!-- Isi Tab Bahan -->
+                        <div id="tab-gudeg-bahan" class="mt-4">
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-stone-700 text-sm list-disc pl-5">
+                                <li>1 kg Nangka muda (potong-potong)</li>
+                                <li>10 butir telur ayam rebus kupas</li>
+                                <li>10 lembar daun salam</li>
+                                <li>8 cm lengkuas (memarkan)</li>
+                                <li>200 gram gula merah/jawa</li>
+                                <li>1 liter santan encer</li>
+                                <li>500 ml santan kental</li>
+                                <li>15 butir bawang merah (bumbu halus)</li>
+                                <li>8 siung bawang putih (bumbu halus)</li>
+                                <li>1 sdm ketumbar bubuk (bumbu halus)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Isi Tab Cara (Mula-mula disembunyikan) -->
+                        <div id="tab-gudeg-cara" class="hidden mt-4">
+                            <ol class="space-y-3 text-stone-700 text-sm list-decimal pl-5">
+                                <li>Alasi dasar panci tebal dengan daun salam, lalu tata nangka muda di atasnya.</li>
+                                <li>Tambahkan lengkuas memar, bumbu halus yang dicampur santan encer, serta gula merah.</li>
+                                <li>Masukkan telur rebus kupas di sela-sela nangka. Masak dengan api sedang cenderung kecil hingga air menyusut dan nangka melunak.</li>
+                                <li>Tuangkan santan kental perlahan. Tutup panci rapat dan masak kembali dengan api sangat kecil selama 3-4 jam hingga kuah kering berminyak kecokelatan.</li>
+                                <li>Sajikan Gudeg hangat bersama pelengkap krecek pedas dan opor ayam kampung.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Row 2: Resep Sate Klatak (Text Left, Image Right) -->
+    <section id="resep-klatak" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Description Container -->
+                <div class="order-2 lg:order-1">
+                    <span class="text-amber-700 font-bold tracking-wider text-xs uppercase block mb-2">Resep Gurih & Minimalis</span>
+                    <h2 class="text-3xl font-bold text-amber-900 mb-6">Sate Klatak Gurih Bantul</h2>
+                    <p class="text-stone-700 leading-relaxed mb-6">
+                        Berbeda dari sate kambing pada umumnya yang menggunakan lumuran bumbu kecap pekat atau bumbu kacang tebal, Sate Klatak hanya menggunakan bumbu garam sederhana sehingga memancarkan cita rasa alami daging kambing muda berkualitas tinggi.
+                    </p>
+
+                    <!-- Tab Resep Klatak -->
+                    <div class="mb-6">
+                        <div class="flex border-b border-amber-300">
+                            <button id="tab-klatak-bahan-btn" class="py-2 px-4 font-semibold text-amber-900 border-b-2 border-amber-800 focus:outline-none">Bahan-bahan</button>
+                            <button id="tab-klatak-cara-btn" class="py-2 px-4 font-semibold text-stone-500 hover:text-amber-900 focus:outline-none">Langkah-langkah</button>
+                        </div>
+                        
+                        <!-- Isi Tab Bahan -->
+                        <div id="tab-klatak-bahan" class="mt-4">
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-stone-700 text-sm list-disc pl-5">
+                                <li>500 gram daging kambing muda (potong dadu)</li>
+                                <li>2 siung bawang putih (haluskan)</li>
+                                <li>1 sdt ketumbar bubuk</li>
+                                <li>1 sdt garam halus</li>
+                                <li>Jeruji besi sepeda bersih (sebagai tusukan)</li>
+                                <li><b>Kuah gulai hangat:</b></li>
+                                <li>250 ml santan cair</li>
+                                <li>Bumbu gulai instan / racikan tradisional</li>
+                            </ul>
+                        </div>
+
+                        <!-- Isi Tab Cara (Mula-mula disembunyikan) -->
+                        <div id="tab-klatak-cara" class="hidden mt-4">
+                            <ol class="space-y-3 text-stone-700 text-sm list-decimal pl-5">
+                                <li>Lumuri potongan daging kambing dengan bawang putih halus, ketumbar bubuk, dan separuh garam. Diamkan 15 menit agar bumbu meresap sempurna.</li>
+                                <li>Tusukkan daging kambing ke potongan jeruji besi sepeda secara perlahan (sekitar 4-5 potong daging per tusuk).</li>
+                                <li>Siapkan panggangan arang batok kelapa hingga membara merah. Bakar sate klatak di atasnya sambil sesekali dibalik.</li>
+                                <li>Taburkan sisa garam halus di atas daging yang sedang dibakar agar memunculkan bunyi letupan gurih ("klatak-klatak"). Bakar hingga matang kecokelatan.</li>
+                                <li>Sajikan sate klatak panas bersama siraman kuah gulai gurih encer dan irisan cabai rawit merah.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image Container -->
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-amber-500/20 rounded-lg -z-10"></div>
+                        <img src="[https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&q=80&w=600)" 
+                             alt="Sate Klatak di Atas Bara Api" 
+                             class="rounded-xl shadow-lg w-full object-cover h-[400px]"
+                             onerror="this.src='[https://placehold.co/600x400?text=Sate+Klatak+Jogja](https://placehold.co/600x400?text=Sate+Klatak+Jogja)'"/>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-900/20 rounded-lg -z-10"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION (Ulasan Pengunjung) -->
+    <section class="bg-amber-900 text-white py-16">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Bagikan Pengalaman Kuliner Jogja Anda</h2>
+            <p class="text-amber-200 mb-8 text-sm md:text-base">Pernah mencoba memasak atau mencicipi kuliner Yogyakarta di atas? Tuliskan ulasan singkat Anda di bawah ini secara instan!</p>
+            
+            <div class="bg-amber-950 p-6 rounded-xl shadow-lg text-left">
+                <form id="comment-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-amber-300 mb-1">Nama Lengkap</label>
+                        <input type="text" id="comment-name" required class="w-full bg-amber-900/40 border border-amber-700 rounded p-3 text-white placeholder-amber-500/70 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Contoh: Budi Santoso">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-amber-300 mb-1">Komentar / Pengalaman</label>
+                        <textarea id="comment-text" required rows="3" class="w-full bg-amber-900/40 border border-amber-700 rounded p-3 text-white placeholder-amber-500/70 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Tulis ulasan Anda di sini..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold py-3 px-6 rounded transition duration-300">Kirim Ulasan</button>
+                </form>
+
+                <div id="comment-success" class="hidden mt-4 p-3 bg-emerald-800 text-emerald-100 rounded text-center text-sm">
+                    Komentar berhasil ditambahkan ke daftar ulasan di bawah!
+                </div>
+
+                <!-- List Ulasan -->
+                <div class="mt-8 border-t border-amber-800 pt-6">
+                    <h3 class="text-lg font-bold text-amber-300 mb-4">Ulasan Pengunjung</h3>
+                    <div id="comment-list" class="space-y-4">
+                        <div class="border-b border-amber-900/50 pb-3">
+                            <span class="font-bold text-amber-400">Rini Amalia</span>
+                            <span class="text-xs text-amber-500 ml-2">Baru saja</span>
+                            <p class="text-stone-300 text-sm mt-1">Resep Sate Klatak sangat praktis! Pakai garpu besi tebal di dapur ternyata hasilnya mirip sekali dengan aslinya di Bantul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Brand Column -->
+            <div>
+                <span class="text-2xl font-bold tracking-wider text-amber-500">Jogja<span class="text-white">Rasa</span></span>
+                <p class="mt-4 text-sm leading-relaxed">
+                    Eksplorasi warisan cita rasa kuliner legendaris dari sudut-sudut kota istimewa Yogyakarta. Melestarikan resep kuno untuk dinikmati di masa kini.
+                </p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Navigasi Cepat</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#beranda" class="hover:text-amber-400 transition">Beranda Utama</a></li>
+                    <li><a href="#kuliner-populer" class="hover:text-amber-400 transition">Kuliner Populer</a></li>
+                    <li><a href="#resep-gudeg" class="hover:text-amber-400 transition">Resep Gudeg Tradisional</a></li>
+                    <li><a href="#resep-klatak" class="hover:text-amber-400 transition">Resep Sate Klatak</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact / Socials -->
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Hubungi Kami</h4>
+                <p class="text-sm mb-4">Malioboro, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="hover:text-amber-400 transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-stone-800 text-center text-xs">
+            <p>&copy; 2026 JogjaRasa. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="[https://code.jquery.com/jquery-3.6.4.min.js](https://code.jquery.com/jquery-3.6.4.min.js)"></script>
+    <!-- Hubungkan ke File JS Eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
